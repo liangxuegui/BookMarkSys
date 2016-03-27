@@ -1,4 +1,4 @@
-package com.liyu.bookmarksys.vo;
+package com.amos.bookmarksys.vo;
 
 public class BookMarkVo {
 	private String title;

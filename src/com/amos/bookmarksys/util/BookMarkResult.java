@@ -1,4 +1,4 @@
-package com.liyu.bookmarksys.util;
+package com.amos.bookmarksys.util;
 
 public class BookMarkResult {
 	private int status;

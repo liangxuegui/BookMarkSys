@@ -1,8 +1,8 @@
-package com.liyu.bookmarksys.core.service;
+package com.amos.bookmarksys.core.service;
 
 
-import com.liyu.bookmarksys.util.BookMarkResult;
-import com.liyu.bookmarksys.util.Page;
+import com.amos.bookmarksys.util.BookMarkResult;
+import com.amos.bookmarksys.util.Page;
 
 public interface IBaseService<T> {
 

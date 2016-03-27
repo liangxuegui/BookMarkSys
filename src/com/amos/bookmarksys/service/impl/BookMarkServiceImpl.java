@@ -1,4 +1,4 @@
-package com.liyu.bookmarksys.service.impl;
+package com.amos.bookmarksys.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,12 +6,12 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import com.liyu.bookmarksys.service.IBookMarkService;
-import com.liyu.bookmarksys.util.BookMarkResult;
-import com.liyu.bookmarksys.util.FileUtil;
-import com.liyu.bookmarksys.util.JsonUtil;
-import com.liyu.bookmarksys.util.Page;
-import com.liyu.bookmarksys.vo.BookMarkVo;
+import com.amos.bookmarksys.service.IBookMarkService;
+import com.amos.bookmarksys.util.BookMarkResult;
+import com.amos.bookmarksys.util.FileUtil;
+import com.amos.bookmarksys.util.JsonUtil;
+import com.amos.bookmarksys.util.Page;
+import com.amos.bookmarksys.vo.BookMarkVo;
 
 @Service("bookService")
 public class BookMarkServiceImpl implements IBookMarkService {
@@ -32,16 +32,16 @@ public class BookMarkServiceImpl implements IBookMarkService {
 			flag = list.add(bookMark);
 			if(flag){
 				result.setStatus(1);
-				result.setMsg("±£´æ³É¹¦");
+				result.setMsg("ï¿½ï¿½ï¿½ï¿½É¹ï¿½");
 				JsonUtil.lsitToFile(list,FileUtil.path());
 			}else{
 				result.setStatus(0);
-				result.setMsg("±£´æÊ§°Ü");
+				result.setMsg("ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½");
 			}
 			
 		}else{
 			result.setStatus(0);
-			result.setMsg(bookMark.getTitle()+"ÒÑ´æÔÚ£¬±£´æÊ§°Ü");
+			result.setMsg(bookMark.getTitle()+"ï¿½Ñ´ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½");
 		}
 		return result;
 	}
@@ -57,11 +57,11 @@ public class BookMarkServiceImpl implements IBookMarkService {
 		}
 		if (used == null) {
 			result.setStatus(0);
-			result.setMsg("ÎÞ·¨É¾³ý£¬Ã»ÓÐ´ËÊéÇ©");
+			result.setMsg("ï¿½Þ·ï¿½É¾ï¿½ï¿½Ã»ï¿½Ð´ï¿½ï¿½ï¿½Ç©");
 		}else{
 			result.setStatus(1);
-			result.setMsg("É¾³ý³É¹¦");
-			//½«É¾³ýºóÐÂµÄlistÐ´ÈëÎÄ¼þ
+			result.setMsg("É¾ï¿½ï¿½É¹ï¿½");
+			//ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½Âµï¿½listÐ´ï¿½ï¿½ï¿½Ä¼ï¿½
 			JsonUtil.lsitToFile(list,FileUtil.path());
 		}
 		return result;
@@ -75,11 +75,11 @@ public class BookMarkServiceImpl implements IBookMarkService {
 		}
 		if (list == null) {
 			result.setStatus(0);
-			result.setMsg("´ËÎÄ¼þÃ»ÓÐÊý¾Ý");
+			result.setMsg("ï¿½ï¿½ï¿½Ä¼ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½");
 			return result;
 		}
 		result.setStatus(1);
-		result.setMsg("²éÑ¯³É¹¦");
+		result.setMsg("ï¿½ï¿½Ñ¯ï¿½É¹ï¿½");
 		result.setData(list);
 		return result;
 	}
@@ -94,7 +94,7 @@ public class BookMarkServiceImpl implements IBookMarkService {
 			list = list.subList((page.getPageNum() - 1<=0?0:page.getPageNum() - 1) * page.getPageSize(), page.getPageNum() * page.getPageSize());
 		}
 		result.setStatus(1);
-		result.setMsg("²éÑ¯³É¹¦");
+		result.setMsg("ï¿½ï¿½Ñ¯ï¿½É¹ï¿½");
 		result.setData(list);
 		result.setPage(page);
 		return result;

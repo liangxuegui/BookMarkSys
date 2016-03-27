@@ -1,4 +1,4 @@
-package com.liyu.bookmarksys.entity;
+package com.amos.bookmarksys.entity;
 
 public class BookMark {
 	private String title;

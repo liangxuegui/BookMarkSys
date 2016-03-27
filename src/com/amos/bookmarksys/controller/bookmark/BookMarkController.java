@@ -1,4 +1,4 @@
-package com.liyu.bookmarksys.controller.bookmark;
+package com.amos.bookmarksys.controller.bookmark;
 
 import javax.annotation.Resource;
 
@@ -6,17 +6,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.liyu.bookmarksys.core.controller.BaseController;
-import com.liyu.bookmarksys.service.IBookMarkService;
-import com.liyu.bookmarksys.util.BookMarkResult;
-import com.liyu.bookmarksys.util.Page;
-import com.liyu.bookmarksys.vo.BookMarkVo;
+import com.amos.bookmarksys.core.controller.BaseController;
+import com.amos.bookmarksys.service.IBookMarkService;
+import com.amos.bookmarksys.util.BookMarkResult;
+import com.amos.bookmarksys.util.Page;
+import com.amos.bookmarksys.vo.BookMarkVo;
 
 /**
  * @ClassName: BookMarkController
  * @Description: TODO
  * @author: Administrator
- * @date: 2015Äê12ÔÂ3ÈÕ ÏÂÎç11:50:00
+ * @date: 2015ï¿½ï¿½12ï¿½ï¿½3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½11:50:00
  */
 @Controller
 @RequestMapping("bookMark")
@@ -37,7 +37,7 @@ public class BookMarkController extends BaseController{
 			result = bookService.delete(bookMark);
 		} catch (Exception e) {
 			result.setData(2);
-			result.setMsg("ÎÄ¼þÐ´Èë³ö´í£¡");
+			result.setMsg("ï¿½Ä¼ï¿½Ð´ï¿½ï¿½ï¿½ï¿½?");
 			e.printStackTrace();
 		}
 		return result;
@@ -50,7 +50,7 @@ public class BookMarkController extends BaseController{
 			result = bookService.save(bookMark);
 		} catch (Exception e) {
 			result.setData(2);
-			result.setMsg("ÎÄ¼þÐ´Èë³ö´í£¡");
+			result.setMsg("ï¿½Ä¼ï¿½Ð´ï¿½ï¿½ï¿½ï¿½?");
 			e.printStackTrace();
 		}
 		return result;

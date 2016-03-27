@@ -1,4 +1,4 @@
-package com.liyu.bookmarksys.util;
+package com.amos.bookmarksys.util;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,9 +11,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.amos.bookmarksys.vo.BookMarkVo;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.liyu.bookmarksys.vo.BookMarkVo;
 
 public class JsonUtil {
 	
@@ -38,7 +38,7 @@ public class JsonUtil {
 			if (list != null) {
 				if(bookMarkVo != null){
 					
-					//¸ù¾ÝtitleÄ£ºý²éÑ¯
+					//ï¿½ï¿½ï¿½titleÄ£ï¿½ï¿½ï¿½Ñ¯
 					if(bookMarkVo.getTitle()!=null && !"".equals(bookMarkVo.getTitle().trim())){
 						List searchList = new ArrayList();
 						for (Object object : list) {
@@ -59,7 +59,7 @@ public class JsonUtil {
 		return null;
 		
 	}
-	//ÖØÐÂÐ´ÈëjsonÎÄ¼þ
+	//ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½jsonï¿½Ä¼ï¿½
 	public static void lsitToFile(List list,String path) throws Exception{
 		Gson gson = new Gson();
 		String jsonStr = gson.toJson(list);
